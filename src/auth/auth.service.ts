@@ -38,8 +38,6 @@ export class AuthService {
       email: user._doc.email,
     };
 
-    console.log(user);
-
     return {
       access_token: this.jwtService.sign(payload),
     };
