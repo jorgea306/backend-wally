@@ -1,5 +1,5 @@
 export class ProductsDTO {
-  SDK: string;
+  SKU: string;
   code?: number;
   name: string;
   description?: string;

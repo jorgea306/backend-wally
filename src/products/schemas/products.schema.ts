@@ -1,11 +1,11 @@
 import { Schema } from 'mongoose';
 
 export const ProductsSchema = new Schema({
-  SDK: String,
-  code: Number,
-  name: String,
-  description: String,
-  pictures: Array,
-  price: Number,
-  currency: String,
+  SKU: { type: String, required: true },
+  code: { type: Number, required: false },
+  name: { type: String, required: true },
+  description: { type: String, required: false },
+  pictures: { type: Array, required: true },
+  price: { type: Number, required: true },
+  currency: { type: String, required: true },
 });

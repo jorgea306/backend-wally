@@ -10,10 +10,13 @@ import {
   Param,
   NotFoundException,
 } from '@nestjs/common';
+import { UseGuards } from '@nestjs/common/decorators';
 import { Response } from 'express';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { ProductsDTO } from './dto/products.dto';
 import { ProductsService } from './products.service';
 
+@UseGuards(JwtAuthGuard)
 @Controller('products')
 export class ProductsController {
   constructor(private productsService: ProductsService) {}
